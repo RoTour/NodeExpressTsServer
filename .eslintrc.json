@@ -1,6 +1,6 @@
 // project/.eslintrc.json
 {
-    "parser": "@typescript-eslint/parser",   // Remove this if you don't use typescript
+    "parser": "@typescript-eslint/parser",
     "env": {
       "browser": true,
       "es6": true,
@@ -18,7 +18,6 @@
       "ecmaVersion": 2018,
       "sourceType": "module"
     },
-    // Remove react and react-hooks if it's a node project
     "plugins": ["prettier"],
     "rules": {
       "prettier/prettier": "error",
