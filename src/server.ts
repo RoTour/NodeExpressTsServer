@@ -1,10 +1,10 @@
-import express, { Express, Request, Response } from "express";
-import { LOGGER } from "./util/logger";
-import { errorHandler } from "./middleware/errorHandler.middleware";
-import { HttpStatus } from "./util/http-status";
-import { ApplicationConfig } from "./config/application.config";
-import { router as pageRouter } from "./router/pages.router";
-import "reflect-metadata";
+import express, { Express } from 'express';
+import { LOGGER } from './util/logger';
+import { errorHandler } from './middleware/errorHandler.middleware';
+import { HttpStatus } from './util/http-status';
+import { ApplicationConfig } from './config/application.config';
+import { router as pageRouter } from './router/pages.router';
+import 'reflect-metadata';
 
 const startServer = async ({
   port,
@@ -17,7 +17,7 @@ const startServer = async ({
   // server.use(cookieParser());
 
   // Setup Routers
-  app.use("", pageRouter);
+  app.use('', pageRouter);
 
   // ? Catch all errors
   app.use((req, res, next) => next(HttpStatus.NOT_FOUND));
